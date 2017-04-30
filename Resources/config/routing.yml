@@ -1,0 +1,3 @@
+rico_security_homepage:
+    path:     /
+    defaults: { _controller: RicoSecurityBundle:Default:index }
