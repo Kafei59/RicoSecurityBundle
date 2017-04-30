@@ -1,0 +1,13 @@
+{
+    "name": "rico/security-bundle",
+    "description": "Advanced Security Bundle that provides useful tools to manage bigger web applications",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pierrick Gicquelais",
+            "email": "pierrick.gicquelais@gmail.com"
+        }
+    ],
+    "require": {}
+}
