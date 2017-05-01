@@ -13,7 +13,7 @@ namespace Rico\SecurityBundle;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
- * Rico SecurityBundle
+ * Class RicoSecurityBundle
  * @package Rico\SecurityBundle
  */
 class RicoSecurityBundle extends Bundle
