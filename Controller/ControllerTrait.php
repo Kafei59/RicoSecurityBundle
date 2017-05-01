@@ -71,49 +71,4 @@ trait ControllerTrait
             return $this->container->get('security.authorization_checker')->isGranted($attributes, $subject);
         }
     }
-
-
-    // TODO: transform it
-//    /**
-//     * Access Denied if AbstractUser does not have correct permissions on $object
-//     * Throws Exception also if LegalEntity not found when Role is Pro
-//     *
-//     * @param $attributes
-//     * @param $object
-//     * @param AbstractUser $user
-//     * @param LegalEntity|null $legalEntity
-//     */
-//    protected function denyAccessIfNotGranted($attributes, $object, AbstractUser $user, LegalEntity $legalEntity = null)
-//    {
-//        if (!is_array($attributes)) {
-//            $attributes = array($attributes);
-//        }
-//
-//        if ($this->userIsGranted(Role::PRO, $user)) {
-//            if (!$legalEntity instanceof LegalEntity) {
-//                throw new NotFoundHttpException('exception.legal_entity.not_found');
-//            }
-//
-//            if (!is_string($object)) {
-//                if ($this->isGranted($attributes, $object)) {
-//                    return;
-//                }
-//
-//                $this->denyAccessUnlessGranted($attributes, $object, $legalEntity);
-//            }
-//
-//            if ($legalEntity->getOwner() != $user) {
-//                $manager = $this->get('pumpkin.core.permission_manager');
-//                foreach ($attributes as $mask) {
-//                    if (!$manager->hasPermission($mask, $object, $user, $legalEntity)) {
-//                        throw new AccessDeniedHttpException('exception.permission.access_denied');
-//                    }
-//                }
-//            }
-//        } else {
-//            if (!is_string($object)) {
-//                $this->denyAccessUnlessGranted($attributes, $object, $user);
-//            }
-//        }
-//    }
 }
